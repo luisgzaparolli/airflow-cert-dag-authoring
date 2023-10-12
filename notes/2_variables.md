@@ -39,6 +39,10 @@ ps. this variables will be hidden from the users and will not connect or be stor
 - Secret Backend - local files or custom backends
 - Programmatically
 
+- By creating a variable with an environment variable you:
+    - avoid making a connection to your DB
+    - hide sensitive values (the variable can only be fetched within a DAG)
+
 The order that Airflows checks for variables: Secrets Backends -> Environment Variable -> DB
 
 Can also create connections like this:
